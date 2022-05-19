@@ -41,7 +41,7 @@ export class AuthService {
         }
         delete user.hash
 
-        return user; 
+        return this.signinToken(user.id,user.email); 
     }
    
     async signinToken(userId : Number, userEmail : String)  {
